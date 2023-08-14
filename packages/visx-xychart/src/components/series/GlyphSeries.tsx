@@ -14,7 +14,9 @@ export default function GlyphSeries<
 }: Omit<BaseGlyphSeriesProps<XScale, YScale, Datum>, 'renderGlyphs'> & {
   renderGlyph?: React.FC<GlyphProps<Datum>>;
   /** Passed to useEventHandlers to override findNearestDatum logic */
-  findNearestDatumOverride?: (params: NearestDatumArgs<XScale, YScale, Datum>,) => NearestDatumReturnType<Datum>;
+  findNearestDatumOverride?: (
+    params: NearestDatumArgs<XScale, YScale, Datum>,
+  ) => NearestDatumReturnType<Datum>;
 }) {
   const renderGlyphs = useCallback(
     ({

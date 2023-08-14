@@ -94,7 +94,9 @@ export type XYChartProps<
   resizeObserverPolyfill?: ResizeObserverPolyfill;
 
   /** Passed to useEventHandlers to override findNearestDatum logic */
-  findNearestDatumOverride?: (params: NearestDatumArgs<XScale, YScale, Datum>,) => NearestDatumReturnType<Datum>;
+  findNearestDatumOverride?: (
+    params: NearestDatumArgs<XScale, YScale, Datum>,
+  ) => NearestDatumReturnType<Datum>;
 };
 
 const allowedEventSources = [XYCHART_EVENT_SOURCE];
